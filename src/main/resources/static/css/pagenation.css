@@ -1,0 +1,10 @@
+.custom_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.custom_page table {
+  width: 1300px;
+}
