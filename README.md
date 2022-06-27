@@ -39,3 +39,11 @@ spring:
 [페이지 네이션 관련 내용](https://github.com/jeonghyeonkwon/blog-example-project/tree/main/src/main/java/com/example/blogproject/page)
 
 [JSP 코드](https://github.com/jeonghyeonkwon/blog-example-project/blob/main/src/main/webapp/WEB-INF/views/pagenation.jsp)
+
+## 2. Jquery를 이용한 동적 페이지 관련
+
+### http://loocalhost:포트번호/dynamic-jquery-form (페이지 경로)
+
+[JSP 코드](https://github.com/jeonghyeonkwon/blog-example-project/blob/main/src/main/webapp/WEB-INF/views/pagenation.jsp)
+
+[JS 코드](https://github.com/jeonghyeonkwon/blog-example-project/tree/main/src/main/resources/static/js)
