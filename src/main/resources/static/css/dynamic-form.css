@@ -1,0 +1,31 @@
+.dynamic-form {
+  margin: 40px;
+  padding: 30px;
+  /* background-color: yellowgreen; */
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.dynamic-button {
+  width: 100%;
+  /* background-color: #fff; */
+}
+.dynamic-img {
+  width: 100%;
+  padding: 20px 0px;
+  /* background-color: grey; */
+  text-align: center;
+}
+
+.dynamic-field {
+  width: 100%;
+  margin: 20px 0;
+  /* background-color: hotpink; */
+  display: flex;
+}
+.dynamic-field input {
+  width: 90%;
+  display: inline-block;
+}
+.dynamic-field button {
+  width: 10%;
+}

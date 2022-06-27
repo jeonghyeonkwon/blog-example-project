@@ -19,7 +19,13 @@ public class PageService {
     public PagenationFrame apiList(Pageable pageable) {
         Page<PageUserResponseDto> result = pageUserRepository.userList(pageable);
 
-        PagenationFrame dtos = new PagenationFrame<>(result.getNumber(),result.isFirst(),result.isLast(),result.getTotalPages(),result.getTotalElements(),result.getContent());
+        PagenationFrame dtos = new PagenationFrame<>(result.getNumber(),
+                result.isFirst(),
+                result.isLast(),
+                result.getTotalPages(),
+                result.getTotalElements(),
+                result.getContent()
+        );
         return dtos;
     }
 }

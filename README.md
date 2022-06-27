@@ -4,7 +4,7 @@
 
 ### <span style="color:gray">application.yml 추가</span>
 
-위치는 src/main/resource 안에
+위치는 src/main/resource 안에 내용을 추가해 주세요
 
 ```YAML
 server:
