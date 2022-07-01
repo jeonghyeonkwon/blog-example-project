@@ -42,6 +42,7 @@ $(document).ready(function () {
     $.ajax({
       url: "/api/poi/download",
       type: "POST",
+      contentType: "application/json",
       data: JSON.stringify(data),
       success: function (res) {},
       error: function (err) {},
