@@ -1,4 +1,4 @@
-package com.example.blogproject.aboutenum.dto;
+package com.example.blogproject.aboutjava.dto;
 
 import lombok.Data;
 

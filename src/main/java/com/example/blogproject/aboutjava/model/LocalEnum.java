@@ -1,6 +1,6 @@
-package com.example.blogproject.aboutenum.model;
+package com.example.blogproject.aboutjava.model;
 
-import com.example.blogproject.aboutenum.dto.LocalDto;
+import com.example.blogproject.aboutjava.dto.LocalDto;
 
 import java.util.List;
 import java.util.stream.Collectors;
