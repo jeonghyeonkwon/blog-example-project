@@ -2,49 +2,29 @@ package com.example.blogproject.aboutjava.controller;
 
 import com.example.blogproject.aboutjava.dto.DefaultObjectDto;
 import com.example.blogproject.aboutjava.dto.EqualsDto;
-import com.example.blogproject.aboutjava.dto.LocalDto;
 import com.example.blogproject.aboutjava.dto.LombokObjectDto;
-import com.example.blogproject.aboutjava.model.LocalEnum;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
 
 @RestController
-@RequestMapping("/api/java")
-public class JavaController {
-
+@RequestMapping("/api/java/equals")
+public class JavaEqualsController {
     /*
-    * enum 관련 예제
-    * */
-    @GetMapping("/enum/local-list")
-    public ResponseEntity localList(){
-        List<LocalDto> localDtos = LocalEnum.localList();
-        return new ResponseEntity(localDtos, HttpStatus.OK);
-    }
-    @GetMapping("/enum/local")
-    public ResponseEntity findLocalByKor(@RequestParam("kor") String kor){
-        try{
-            LocalDto local = LocalEnum.findLocalByKor(kor);
-            return new ResponseEntity(local,HttpStatus.OK);
-        }catch (NullPointerException e){
-            e.printStackTrace();
-            return new ResponseEntity("해당 지역은 없습니다",HttpStatus.BAD_REQUEST);
-        }
-    }
-
-    /*
-    * equals hashcode 관련 내용 정리
-    * */
-    @GetMapping("/equals")
+     * equals hashcode 관련 내용 정리
+     * */
+    @GetMapping("")
     public ResponseEntity equalsAndHashCodes(){
         /*
-        * String 비교
-        * */
+         * String 비교
+         * */
 
         String str1 = "abc";
         String str2 = "abc";
@@ -69,8 +49,8 @@ public class JavaController {
         System.out.println();
 
         /*
-        * ----------------- 기본 클래스 비교
-        * */
+         * ----------------- 기본 클래스 비교
+         * */
         DefaultObjectDto dDto1 = new DefaultObjectDto("dto1","common",1L);
         DefaultObjectDto dEqualsDto1 = new DefaultObjectDto("dto1","common",1L);
         DefaultObjectDto dDto2 = new DefaultObjectDto("dto2","common",2L);
@@ -106,8 +86,8 @@ public class JavaController {
 
         System.out.println();
         /*
-        * ----------------- 롬복 @EqualsAndHashCode 이용하여 비교
-        * */
+         * ----------------- 롬복 @EqualsAndHashCode 이용하여 비교
+         * */
         LombokObjectDto lDto1 = new LombokObjectDto("dto1","common",1L);
         LombokObjectDto lEqualsDto1 = new LombokObjectDto("dto1","common",1L);
         LombokObjectDto lDto2 = new LombokObjectDto("dto2","common",2L);
@@ -134,8 +114,8 @@ public class JavaController {
         System.out.println();
 
         /*
-        * ----------------- equals 재정의 (commonValue만 같으면 같은것으로 취급)
-        * */
+         * ----------------- equals 재정의 (commonValue만 같으면 같은것으로 취급)
+         * */
 
         EqualsDto eDto1 = new EqualsDto("dto1","common",1L);
         EqualsDto eEqualsDto1 = new EqualsDto("dto1","common",1L);
@@ -157,6 +137,8 @@ public class JavaController {
         System.out.println("dto1 == dto2 : " + (eDto1==eDto2));
         System.out.println("dto1.equals(lEqualsDto1) : " + eDto1.equals(eEqualsDto1));
         System.out.println("dto1.equals(dto2) : " + eDto1.equals(eDto2));
+
+
         Set<EqualsDto> eSet = new HashSet<>();
         eSet.add(eDto1);
         eSet.add(eEqualsDto1);
@@ -243,8 +225,8 @@ public class JavaController {
             equals TreeSet iterator -> name : dto1 commonValue : common number : 1
             equals TreeSet iterator -> name : dto2 commonValue : common number : 2
         *
+        *
+        * 도움되는 글 : https://okky.kr/article/596050
         * */
     }
-
-
 }
