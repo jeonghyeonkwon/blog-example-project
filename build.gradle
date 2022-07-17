@@ -32,7 +32,10 @@ dependencies {
     implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2'
 
     implementation 'javax.servlet:jstl'
-}
+    // webClient 예제용
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation("io.netty:netty-resolver-dns-native-macos:4.1.75.Final:osx-aarch_64")
+    }
 
 tasks.named('test') {
     useJUnitPlatform()
