@@ -47,3 +47,37 @@ spring:
 [JSP 코드](https://github.com/jeonghyeonkwon/blog-example-project/blob/main/src/main/webapp/WEB-INF/views/pagenation.jsp)
 
 [JS 코드](https://github.com/jeonghyeonkwon/blog-example-project/tree/main/src/main/resources/static/js)
+
+## 3. API 호출 관련
+
+
+### http://loocalhost:포트번호/api/call/rest-template (RestTemplate 사용)
+
+### http://loocalhost:포트번호/api/call/web-client (WebClient 사용)
+
+#### [controller 코드](https://github.com/jeonghyeonkwon/blog-example-project/blob/main/src/main/java/com/example/blogproject/aboutapi/controller/ApiCallController.java)
+
+## 4. exception 처리 관련 (rest api용)
+
+### http://loocalhost:포트번호/api/exception (페이지 경로)
+
+#### [관련 package](https://github.com/jeonghyeonkwon/blog-example-project/tree/main/src/main/java/com/example/blogproject/aboutexception)
+
+## 5. dto 검증 관련
+
+### http://loocalhost:포트번호/api/validation (페이지 경로)
+
+#### [관련 package](https://github.com/jeonghyeonkwon/blog-example-project/tree/main/src/main/java/com/example/blogproject/aboutvalidate)
+
+## 6. excel 파일 읽기 관련
+
+### http://loocalhost:포트번호/api/poi/upload (apache poi 사용)
+
+#### [관련 package](https://github.com/jeonghyeonkwon/blog-example-project/tree/main/src/main/java/com/example/blogproject/excel)
+
+## 7. java 내용 관련
+
+#### [enum 관련 테스트](https://github.com/jeonghyeonkwon/blog-example-project/blob/main/src/main/java/com/example/blogproject/aboutjava/controller/JavaEnumController.java) 
+
+#### [equals 관련 테스트](https://github.com/jeonghyeonkwon/blog-example-project/blob/main/src/main/java/com/example/blogproject/aboutjava/controller/JavaEqualsController.java)
+
