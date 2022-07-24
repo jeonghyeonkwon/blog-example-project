@@ -13,7 +13,7 @@ public class JavaClassController {
         OuterClass outerClass = new OuterClass("outerClassTest");
         OuterClass.InnerClass innerClass = outerClass.new InnerClass("innerClassTest");
         controllerPrint("innerClass",innerClass);
-        innerClass.print("controller","controller","컨트롤러에서 매소드 호출");
+        innerClass.print("controller","controller","컨트롤러에서 method 호출");
 //        OuterClass.InnerClass("innerClassTest");
         OuterClass.StaticInnerClass staticInnerClass = new OuterClass.StaticInnerClass("staticInnerClass");
         controllerPrint("staticInnerClass",staticInnerClass);
@@ -29,7 +29,7 @@ public class JavaClassController {
         * className= InnerClass fieldName= innerField fieldValue= innerClassTest
         * ---------------innerClass---------------
         * OuterClass.InnerClass(defaultInnerField=defaultInnerField, innerField=innerClassTest)
-        * className= controller fieldName= controller fieldValue= 컨트롤러에서 매소드 호출
+        * className= controller fieldName= controller fieldValue= 컨트롤러에서 method 호출
         * className= staticInnerClass fieldName= finalOuterField fieldValue= staticOuterField
         * className= staticInnerClass fieldName= staticInnerField fieldValue= staticInnerField
         * className= staticInnerClass fieldName= innerField fieldValue= staticInnerClass
